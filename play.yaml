@@ -9,9 +9,9 @@
 
   tasks:
     - name: run below command
-      command: kubectl apply -f deploy.yaml
+      command: su ubuntu && kubectl apply -f deploy.yaml
 
 
     - name: run below command to deploy service
-      command: kubectl deploy -f service.yaml    
+      command: su ubuntu && kubectl deploy -f service.yaml    
 

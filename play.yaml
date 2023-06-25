@@ -1,0 +1,17 @@
+---
+
+- name: playbook to deploy application on kubernetes
+  hosts: all
+  become: yes
+  user: root
+  
+
+
+  tasks:
+    - name: run below command
+      command: kubectl apply -f deploy.yaml
+
+
+    - name: run below command to deploy service
+      command: kubectl deploy -f service.yaml    
+

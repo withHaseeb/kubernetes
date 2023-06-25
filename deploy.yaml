@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hussey-deploy
+  labels:
+    app: hussey
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hussey
+  template:
+    metadata:
+      labels:
+        app: hussey
+    spec:
+      containers:
+      - name: hussey
+        image: withhaseeb/hussey
+        ports:
+        - containerPort: 80
